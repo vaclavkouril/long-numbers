@@ -1,17 +1,28 @@
 ﻿using System;
+using System.Reflection.Metadata;
 
 namespace Long_Numbers
 {
-    public interface LongNumber
+    public class LongNumber
     {
-        public void LongNumber(string bigNum);
-        public LongNumber Plus(LongNumber num1, LongNumber num2);
-    }
-    public class Long_number : LongNumber
-    {
-        public void LongNumber(string bigNum)
+        static int[] Primes = {2,3,5,7,1000012337};
+        static int modulo(String num, int a)
         {
-            
+            int result = 0;
+            for (int i = 0; i < num.Length; i++)
+            {
+                result = (result * 10 + num[i] - '0') % a;
+            }
+            return result;
+        }
+
+        private int[] vector = new int[Primes.Length]; 
+        public LongNumber(string bigNum)
+        {
+            for (int i = 0; i < Primes.Length; i++)
+            {
+                vector[i] = modulo(bigNum, Primes[i]);
+            }
         }
         public LongNumber Plus(LongNumber a, LongNumber b)
         {
@@ -23,7 +34,8 @@ namespace Long_Numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LongNumber a = new LongNumber("10000123378483919101091398485u75202");
+            Console.ReadLine();
         }
     }
 }
