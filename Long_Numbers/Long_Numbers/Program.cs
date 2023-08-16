@@ -6,7 +6,8 @@ namespace Long_Numbers
     public class LongNumber
     {
         static int[] Primes = {2,3,5,7,1000012337};
-
+        private int[] vector = new int[Primes.Length];
+        private byte sign = 0;
         private static int modulo(int dividend, int divisor)
         {
             return (dividend % divisor+divisor) % divisor;
@@ -20,10 +21,13 @@ namespace Long_Numbers
             }
             return result;
         }
-
-        private int[] vector = new int[Primes.Length]; 
         public LongNumber(string bigNum)
         {
+            if (bigNum[0] == '-')
+            {
+                sign = 1;
+                bigNum.Remove(0,1);
+            }
             for (int i = 0; i < Primes.Length; i++)
             {
                 vector[i] = modulo(bigNum, Primes[i]);
@@ -63,7 +67,7 @@ namespace Long_Numbers
         static void Main(string[] args)
         {
             LongNumber a = new LongNumber("10000123378483919101091398485123345765432765432543254325432543254324375202");
-            LongNumber b = new LongNumber("10000123378483919101091398485752022134932038410847104872109389028310");
+            LongNumber b = new LongNumber("-10000123378483919101091398485752022134932038410847104872109389028310");
             LongNumber c = a + b;
             LongNumber d = a * b * c;
             LongNumber e = (d - a) * c;
