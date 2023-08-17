@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using System.Reflection.Metadata;
 
 namespace Long_Numbers
@@ -33,6 +34,58 @@ namespace Long_Numbers
                 vector[i] = modulo(bigNum, Primes[i]);
             }
         }
+
+        public string ToString()
+        {
+            long product = 1;
+            foreach (long prime in Primes)
+            {
+                product *= prime;
+            }
+
+            long[] resultDigits = new long[product.ToString().Length];
+
+            for (int i = 0; i < Primes.Length; i++)
+            {
+                long pi = product / Primes[i];
+                long xi = ModularMultiplicativeInverse(pi, Primes[i]);
+                long contribution = vector[i] * xi * pi;
+
+                for (int j = 0; j < resultDigits.Length; j++)
+                {
+                    resultDigits[j] += contribution % 10;
+                    contribution /= 10;
+                }
+            }
+            
+            for (int i = 0; i < resultDigits.Length - 1; i++)
+            {
+                resultDigits[i + 1] += resultDigits[i] / 10;
+                resultDigits[i] %= 10;
+            }
+
+            // Sestav výsledný řetězec
+            string result = "";
+            for (int i = resultDigits.Length - 1; i >= 0; i--)
+            {
+                result += resultDigits[i];
+            }
+
+            return result; 
+        }
+
+        static long ModularMultiplicativeInverse(long a, long mod)
+        {
+            for (long x = 1; x < mod; x++)
+            {
+                if ((a * x) % mod == 1)
+                {
+                    return x;
+                }
+            }
+            return 1;
+        }
+        
         public static LongNumber operator + (LongNumber num1, LongNumber num2)
         {
             LongNumber num3 = new LongNumber("0");
@@ -71,6 +124,7 @@ namespace Long_Numbers
             LongNumber c = a + b;
             LongNumber d = a * b * c;
             LongNumber e = (d - a) * c;
+            Console.WriteLine(e.ToString());
             Console.ReadLine();
         }
     }
