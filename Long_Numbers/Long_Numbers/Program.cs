@@ -6,18 +6,18 @@ namespace Long_Numbers
 {
     public class LongNumber
     {
-        static int[] Primes = { 5, 7, 3 };
-        private int[] vector = new int[Primes.Length];
+        private static long[] Primes = { (1<<30)-1,(1<<29)-1,(1<<27)-1, (1<<23)-1, (1<<19)-1 };
+        private long[] vector = new long[Primes.Length];
         private byte sign = 0;
 
-        private static int modulo(int dividend, int divisor)
+        private static long modulo(long dividend, long divisor)
         {
             return (dividend % divisor + divisor) % divisor;
         }
 
-        static int modulo(String num, int a)
+        static long modulo(String num, long a)
         {
-            int result = 0;
+            long result = 0;
             for (int i = 0; i < num.Length; i++)
             {
                 result = (result * 10 + num[i] - '0') % a;
@@ -68,8 +68,7 @@ namespace Long_Numbers
                 resultDigits[i + 1] += resultDigits[i] / 10;
                 resultDigits[i] %= 10;
             }
-
-            // Sestav výsledný řetězec
+            
             string result = "";
             for (int i = resultDigits.Length - 1; i >= 0; i--)
             {
@@ -130,12 +129,14 @@ namespace Long_Numbers
     {
         static void Main(string[] args)
         {
+            /*
             LongNumber a = new LongNumber("10000123378483919101091398485123345765432765432543254325432543254324375202");
             LongNumber b = new LongNumber("-10000123378483919101091398485752022134932038410847104872109389028310");
             LongNumber c = a + b;
             LongNumber d = a * b * c;
             LongNumber e = (d - a) * c;
-            LongNumber f = new LongNumber("846");
+            */
+            LongNumber f = new LongNumber("620");
             Console.WriteLine(f.ToString());
             Console.ReadLine();
         }
