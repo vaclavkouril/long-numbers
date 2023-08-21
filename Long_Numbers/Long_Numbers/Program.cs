@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Numerics;
-using System.Reflection.Metadata;
 
 namespace Long_Numbers
 {
     public class LongNumber
     {
-        private static long[] Primes = { (1<<30)-1,(1<<29)-1,(1<<27)-1, (1<<23)-1, (1<<19)-1 };
-        private long[] vector = new long[Primes.Length];
+        public static long[] Primes = { (1<<30)-1,(1<<29)-1,(1<<27)-1, (1<<23)-1, (1<<19)-1 };
+        public long[] vector = new long[Primes.Length];
         private byte sign = 0;
 
         private static long modulo(long dividend, long divisor)
@@ -91,6 +90,24 @@ namespace Long_Numbers
             return 1;
         }
 
+        public BigInteger ToBigInteger()
+        {
+            BigInteger result = vector[0];
+            while (true)
+            {
+                for (int j = 1; j < Primes.Length; j++)
+                {
+                    if (result % Primes[j] != vector[j]) break;
+                    if (j == Primes.Length - 1) return result;
+                }
+
+                result += Primes[0];
+            }
+        }
+        
+        
+        // Operators
+
         public static LongNumber operator +(LongNumber num1, LongNumber num2)
         {
             LongNumber num3 = new LongNumber("0");
@@ -123,6 +140,7 @@ namespace Long_Numbers
 
             return num3;
         }
+
     }
 
     internal class Program
@@ -136,8 +154,8 @@ namespace Long_Numbers
             LongNumber d = a * b * c;
             LongNumber e = (d - a) * c;
             */
-            LongNumber f = new LongNumber("620");
-            Console.WriteLine(f.ToString());
+            LongNumber f = new LongNumber("620100000");
+            Console.WriteLine(f.ToBigInteger().ToString());
             Console.ReadLine();
         }
     }
