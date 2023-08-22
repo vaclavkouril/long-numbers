@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace Long_Numbers
 {
@@ -39,6 +40,7 @@ namespace Long_Numbers
             }
         }
 
+        /*
         public string ToString()
         {
             long product = 1;
@@ -89,6 +91,7 @@ namespace Long_Numbers
 
             return 1;
         }
+        */
 
         public BigInteger ToBigInteger()
         {
@@ -102,6 +105,63 @@ namespace Long_Numbers
                 }
 
                 result += Primes[0];
+            }
+        }
+
+        private string StringNumAddition(string num1, string num2)
+        {
+            List<int> forLoop(char[] biggerNum, char[] smallerNum)
+            {
+                int carry = 0;
+                List<int> result = new List<int>();
+                for (int i = 0;i < smallerNum.Length; i++)
+                {
+                    int numeral = Int32.Parse(biggerNum[i].ToString()) + Int32.Parse(smallerNum[i].ToString()) + carry;
+                    if (numeral >= 10)
+                    {
+                        numeral -= 10;
+                        carry = 1;
+                    }
+                    else carry = 0;
+                    result.Add(numeral);
+                }
+
+                if (smallerNum.Length < biggerNum.Length)
+                {
+                    result.Add(carry + Int32.Parse(biggerNum[smallerNum.Length].ToString()));
+                    int index = smallerNum.Length+1;
+                    for (int i = index;i < biggerNum.Length; i++)
+                    {
+                        result.Add(Int32.Parse(biggerNum[i].ToString()));
+                    }
+                }
+                else if (carry==1) result.Add(1);
+                return result;
+            }
+            char[] numArray1 = num1.ToCharArray();
+            Array.Reverse(numArray1);
+            char[] numArray2 = num2.ToCharArray();
+            Array.Reverse(numArray2);
+            List<int> reversedResult = new List<int>();
+            if (num1.Length >= num2.Length)
+                reversedResult = forLoop(numArray1, numArray2);
+            else reversedResult = forLoop(numArray2, numArray1);
+            int[] result = reversedResult.ToArray();
+            Array.Reverse(result);
+            return result.ToString();
+        }
+        public string ToString()
+        {
+            string result = vector[0].ToString();
+            while (true)
+            {
+                for (int j = 1; j < Primes.Length; j++)
+                {
+                    if (modulo(result, Primes[j]) != vector[j]) break;
+                    if (j == Primes.Length - 1) return result;
+                }
+
+                result = StringNumAddition(result, Primes[0].ToString());
             }
         }
         
@@ -155,7 +215,7 @@ namespace Long_Numbers
             LongNumber e = (d - a) * c;
             */
             LongNumber f = new LongNumber("620100000");
-            Console.WriteLine(f.ToBigInteger().ToString());
+            Console.WriteLine(f.ToString());
             Console.ReadLine();
         }
     }
