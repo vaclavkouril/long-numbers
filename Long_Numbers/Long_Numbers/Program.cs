@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Numerics;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Long_Numbers
 {
@@ -40,59 +39,6 @@ namespace Long_Numbers
             }
         }
 
-        /*
-        public string ToString()
-        {
-            long product = 1;
-            foreach (long prime in Primes)
-            {
-                product *= prime;
-            }
-
-            long[] resultDigits = new long[product.ToString().Length];
-
-            for (int i = 0; i < Primes.Length; i++)
-            {
-                long pi = product / Primes[i];
-                long xi = ModularMultiplicativeInverse(pi, Primes[i]);
-                long contribution = vector[i] * xi * pi;
-
-                for (int j = 0; j < resultDigits.Length; j++)
-                {
-                    resultDigits[j] += contribution % 10;
-                    contribution /= 10;
-                }
-            }
-
-            for (int i = 0; i < resultDigits.Length - 1; i++)
-            {
-                resultDigits[i + 1] += resultDigits[i] / 10;
-                resultDigits[i] %= 10;
-            }
-            
-            string result = "";
-            for (int i = resultDigits.Length - 1; i >= 0; i--)
-            {
-                result += resultDigits[i];
-            }
-
-            return result;
-        }
-
-        static long ModularMultiplicativeInverse(long a, long mod)
-        {
-            for (long x = 1; x < mod; x++)
-            {
-                if ((a * x) % mod == 1)
-                {
-                    return x;
-                }
-            }
-
-            return 1;
-        }
-        */
-
         public BigInteger ToBigInteger()
         {
             BigInteger result = vector[0];
@@ -116,7 +62,7 @@ namespace Long_Numbers
                 List<int> result = new List<int>();
                 for (int i = 0;i < smallerNum.Length; i++)
                 {
-                    int numeral = Int32.Parse(biggerNum[i].ToString()) + Int32.Parse(smallerNum[i].ToString()) + carry;
+                    int numeral = (int)Char.GetNumericValue(biggerNum[i]) + (int)Char.GetNumericValue(smallerNum[i]) + carry;
                     if (numeral >= 10)
                     {
                         numeral -= 10;
@@ -128,11 +74,11 @@ namespace Long_Numbers
 
                 if (smallerNum.Length < biggerNum.Length)
                 {
-                    result.Add(carry + Int32.Parse(biggerNum[smallerNum.Length].ToString()));
+                    result.Add((carry + (int)Char.GetNumericValue(biggerNum[smallerNum.Length])));
                     int index = smallerNum.Length+1;
                     for (int i = index;i < biggerNum.Length; i++)
                     {
-                        result.Add(Int32.Parse(biggerNum[i].ToString()));
+                        result.Add((int)Char.GetNumericValue(biggerNum[i]));
                     }
                 }
                 else if (carry==1) result.Add(1);
@@ -148,7 +94,7 @@ namespace Long_Numbers
             else reversedResult = forLoop(numArray2, numArray1);
             int[] result = reversedResult.ToArray();
             Array.Reverse(result);
-            return result.ToString();
+            return string.Join("",result);
         }
         public string ToString()
         {
@@ -215,7 +161,10 @@ namespace Long_Numbers
             LongNumber e = (d - a) * c;
             */
             LongNumber f = new LongNumber("620100000");
-            Console.WriteLine(f.ToString());
+            LongNumber g = new LongNumber("619342000");
+            g += f;
+            Console.WriteLine(g.ToBigInteger().ToString());
+            Console.WriteLine(g.ToString());
             Console.ReadLine();
         }
     }
