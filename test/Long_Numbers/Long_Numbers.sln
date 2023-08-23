@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Long_Numbers", "Long_Numbers\Long_Numbers.csproj", "{C732026C-F3D8-407C-8D40-93FFABF94A3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1_addition", "Test1_addition\Test1_addition.csproj", "{C732026C-F3D8-407C-8D40-93FFABF94A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongNumberLib", "..\..\LongNumberLib\LongNumberLib\LongNumberLib.csproj", "{3FB80FA0-D3E6-4D5D-AF81-37439250194F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{C732026C-F3D8-407C-8D40-93FFABF94A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C732026C-F3D8-407C-8D40-93FFABF94A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C732026C-F3D8-407C-8D40-93FFABF94A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB80FA0-D3E6-4D5D-AF81-37439250194F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB80FA0-D3E6-4D5D-AF81-37439250194F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB80FA0-D3E6-4D5D-AF81-37439250194F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB80FA0-D3E6-4D5D-AF81-37439250194F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

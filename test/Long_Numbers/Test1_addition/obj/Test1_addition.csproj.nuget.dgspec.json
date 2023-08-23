@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/starvex/Dokumenty/school/long-numbers/test/Long_Numbers/Test1_addition/Test1_addition.csproj": {}
+  },
+  "projects": {
+    "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/LongNumberLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/LongNumberLib.csproj",
+        "projectName": "LongNumberLib",
+        "projectPath": "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/LongNumberLib.csproj",
+        "packagesPath": "/home/starvex/.nuget/packages/",
+        "outputPath": "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/starvex/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/starvex/.dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/starvex/Dokumenty/school/long-numbers/test/Long_Numbers/Test1_addition/Test1_addition.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/starvex/Dokumenty/school/long-numbers/test/Long_Numbers/Test1_addition/Test1_addition.csproj",
+        "projectName": "Test1_addition",
+        "projectPath": "/home/starvex/Dokumenty/school/long-numbers/test/Long_Numbers/Test1_addition/Test1_addition.csproj",
+        "packagesPath": "/home/starvex/.nuget/packages/",
+        "outputPath": "/home/starvex/Dokumenty/school/long-numbers/test/Long_Numbers/Test1_addition/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/starvex/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/LongNumberLib.csproj": {
+                "projectPath": "/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/LongNumberLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/starvex/.dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
