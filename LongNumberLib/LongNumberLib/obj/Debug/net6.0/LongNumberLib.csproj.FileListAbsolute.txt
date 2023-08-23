@@ -1,0 +1,12 @@
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/bin/Debug/net6.0/LongNumberLib.deps.json
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/bin/Debug/net6.0/LongNumberLib.dll
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/bin/Debug/net6.0/LongNumberLib.pdb
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.csproj.AssemblyReference.cache
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.AssemblyInfoInputs.cache
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.AssemblyInfo.cs
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.csproj.CoreCompileInputs.cache
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.dll
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/refint/LongNumberLib.dll
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/LongNumberLib.pdb
+/home/starvex/Dokumenty/school/long-numbers/LongNumberLib/LongNumberLib/obj/Debug/net6.0/ref/LongNumberLib.dll
