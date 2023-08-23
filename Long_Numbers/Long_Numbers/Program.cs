@@ -5,8 +5,7 @@ namespace Long_Numbers
 {
     public class LongNumber
     {
-        //private long[] _defaultPrimes = { (1 << 30) - 1, (1 << 29) - 1, (1 << 27) - 1, (1 << 23) - 1, (1 << 19) - 1 };
-        private static List<long> _primes = new List<long>();
+        public static List<long> _primes = new List<long>();
         private List<long> _vector = new List<long>();
 
         private static long LongModulo(long dividend, long divisor)
@@ -236,7 +235,28 @@ namespace Long_Numbers
 
         public static LongNumber operator /(LongNumber numerator, LongNumber nominator)
         {
-            return numerator;
+            // LongNumber conversion
+            int[] numeratorDigits = Array.ConvertAll(numerator.ToString().ToCharArray(), c => (int)char.GetNumericValue(c));
+            int[] nominatorDigits = Array.ConvertAll(nominator.ToString().ToCharArray(), c => (int)char.GetNumericValue(c));
+            
+            int[] quotient = new int[numeratorDigits.Length];
+            int remainder = 0;
+
+            for (int i = 0; i < numeratorDigits.Length; i++)
+            {
+                int currentDigit = numeratorDigits[i] + remainder * 10;
+                quotient[i] = currentDigit / nominatorDigits[0];
+                remainder = currentDigit % nominatorDigits[0];
+                
+                for (int j = 0; j < numeratorDigits.Length - 1; j++)
+                {
+                    numeratorDigits[j] = currentDigit % 10;
+                    currentDigit = numeratorDigits[j + 1] + currentDigit / 10;
+                }
+            }
+            
+            string resultStr = string.Join("", quotient);
+            numerator._primes
         }
     }
     internal class Program
