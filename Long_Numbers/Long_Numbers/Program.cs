@@ -138,7 +138,7 @@ namespace Long_Numbers
         public new string ToString()
         {
             string result = _vector[0].ToString();
-            int i = 0;
+
             while (true)
             {
                 for (int j = 1; j < _primes.Count; j++)
@@ -256,30 +256,32 @@ namespace Long_Numbers
             }
             
             string resultStr = string.Join("", quotient);
-            numerator._primes
+            LongNumber result =  new LongNumber(resultStr,LongNumber._primes);
+            
+            return result;            
         }
+        public static LongNumber Power(LongNumber number, int exponent)
+        {
+            LongNumber result = new LongNumber("1", LongNumber._primes);
+            if (exponent == 0) 
+                return result;
+            
+            for (int i = 0;i<exponent;i++) 
+                result *= number;
+            
+            return result;
+        }
+
     }
     internal class Program
     {
         static void Main(string[] args)
         {
             
-            LongNumber a = new LongNumber("3752020");
-            LongNumber b = new LongNumber("69000005");
-            LongNumber c = a + b;
-            LongNumber d = a * b;
-            LongNumber e = (d - a) * c;
-            
-            LongNumber f = new LongNumber("620100000");
-            LongNumber g = new LongNumber("619342000");
-            f += g;
-            Console.WriteLine(f.ToBigInteger().ToString());
-            f -= g;
-            Console.WriteLine(f.ToBigInteger().ToString());
-            Console.WriteLine(d.ToBigInteger().ToString());
-            Console.WriteLine(d.ToString());
-            
-            Console.ReadLine();
+            LongNumber a = new LongNumber("3752022412416460");
+            LongNumber b = new LongNumber("53752412124742020");
+            a += b;
+            Console.WriteLine(a.ToBigInteger().ToString());
         }
     }
 }
