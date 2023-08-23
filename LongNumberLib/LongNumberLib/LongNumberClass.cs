@@ -215,7 +215,7 @@ namespace LongNumberLib
                 return s;
             }
 
-            LongNumber num3 = new LongNumber("0");
+            LongNumber num3 = new LongNumber("0",LongNumber._primes);
 
             for (int i = 0; i < _primes.Count; i++)
                 num3._vector[i] = StringModulo(Multiply(num1._vector[i].ToString(), num2._vector[i].ToString()),
