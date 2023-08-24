@@ -10,6 +10,7 @@ namespace LongNumberLib
 
         private static long LongModulo(long dividend, long divisor)
         {
+            //returns number in range 0 < divisor
             return (dividend % divisor + divisor) % divisor;
         }
 
@@ -18,16 +19,31 @@ namespace LongNumberLib
             long result = 0;
             for (int i = 0; i < num.Length; i++)
             {
+                //modulo numeral after numeral
                 result = (result * 10 + num[i] - '0') % a;
             }
 
             return result;
         }
 
+        private static bool IsGreaterOrEqual(string num1, string num2)
+        {
+            if (num1.Length != num2.Length) //checking lenght
+                return num1.Length > num2.Length;
+
+            for (int i = 0; i < num1.Length; i++) //checking each digit from left to right
+            {
+                if (num1[i] != num2[i])
+                    return num1[i] > num2[i];
+            }
+
+            return true; //both same
+        }
+
         public LongNumber(string bigNum, List<long> primes = null)
         {
             _primes = new List<long>();
-            if (primes == null)
+            if (primes == null) // adding default values if none are present
             {
                 long[] defaultPrimes = new long[]
                 {
@@ -47,7 +63,7 @@ namespace LongNumberLib
                 throw new Exception("LongNumber class accepts only non-negative integers");
 
             for (int i = 0; i < _primes.Count; i++)
-                _vector[i] = (StringModulo(bigNum, _primes[i]));
+                _vector[i] = (StringModulo(bigNum, _primes[i])); // constructing rezidual vector
         }
 
         public BigInteger ToBigInteger()
@@ -58,21 +74,20 @@ namespace LongNumberLib
                 for (int j = 1; j < _primes.Count; j++)
                 {
                     if (result % _primes[j] != _vector[j]) break;
-                    if (j == _primes.Count - 1) return result;
+                    if (j == _primes.Count - 1) return result; // found number
                 }
-
                 result += _primes[0];
             }
         }
 
-        private string StringNumAddition(string num1, string num2)
+        private static string StringNumAddition(string num1, string num2)
         {
             List<int> ForLoop(char[] biggerNum, char[] smallerNum)
             {
                 int carry = 0;
                 List<int> result = new List<int>();
 
-                for (int i = 0; i < smallerNum.Length; i++)
+                for (int i = 0; i < smallerNum.Length; i++) // adds numbers in the same place
                 {
                     int numeral = (int)Char.GetNumericValue(biggerNum[i]) + (int)Char.GetNumericValue(smallerNum[i]) +
                                   carry;
@@ -88,7 +103,7 @@ namespace LongNumberLib
                 }
 
                 int startIndex = smallerNum.Length;
-                for (int i = startIndex; i < biggerNum.Length; i++)
+                for (int i = startIndex; i < biggerNum.Length; i++) // adds the rest of numbers
                 {
                     int numeral = (int)Char.GetNumericValue(biggerNum[i]) + carry;
                     if (numeral >= 10)
@@ -101,12 +116,12 @@ namespace LongNumberLib
 
                     result.Add(numeral);
                 }
-                if (carry == 1) 
+                if (carry == 1) // if number gets more numerals than biggerNum 
                     result.Add(1);
 
                 return result;
             }
-
+            //Initialize and reverse num1 and num2
             char[] numArray1 = num1.ToCharArray();
             Array.Reverse(numArray1);
 
@@ -114,12 +129,13 @@ namespace LongNumberLib
             Array.Reverse(numArray2);
 
             List<int> reversedResult = new List<int>();
-
+            
             if (num1.Length >= num2.Length)
                 reversedResult = ForLoop(numArray1, numArray2);
             else
                 reversedResult = ForLoop(numArray2, numArray1);
-
+            
+            //reverse result back to correct form
             int[] result = reversedResult.ToArray();
             Array.Reverse(result);
 
@@ -132,12 +148,13 @@ namespace LongNumberLib
 
             while (true)
             {
+                //Check all modulus of _primes
                 for (int j = 1; j < _primes.Count; j++)
                 {
                     if (StringModulo(result, _primes[j]) != _vector[j]) break;
                     if (j == _primes.Count - 1) return result;
                 }
-
+                
                 result = StringNumAddition(result, _primes[0].ToString());
             }
         }
@@ -226,32 +243,25 @@ namespace LongNumberLib
 
         public static LongNumber operator /(LongNumber numerator, LongNumber nominator)
         {
-            // LongNumber conversion
-            int[] numeratorDigits =
-                Array.ConvertAll(numerator.ToString().ToCharArray(), c => (int)char.GetNumericValue(c));
-            int[] nominatorDigits =
-                Array.ConvertAll(nominator.ToString().ToCharArray(), c => (int)char.GetNumericValue(c));
+        // Convert numerator and nominator to strings
+            string numeratorStr = numerator.ToString();
+            string nominatorStr = nominator.ToString();
 
-            int[] quotient = new int[numeratorDigits.Length];
-            int remainder = 0;
-
-            for (int i = 0; i < numeratorDigits.Length; i++)
+            string iterations = "0";
+            string resultStr = "0";
+            while (true)
             {
-                int currentDigit = numeratorDigits[i] + remainder * 10;
-                quotient[i] = currentDigit / nominatorDigits[0];
-                remainder = currentDigit % nominatorDigits[0];
-
-                for (int j = 0; j < numeratorDigits.Length - 1; j++)
+                for (int i = 0; i < 10; i++)
                 {
-                    numeratorDigits[j] = currentDigit % 10;
-                    currentDigit = numeratorDigits[j + 1] + currentDigit / 10;
+                    resultStr = LongNumber.StringNumAddition(resultStr, nominatorStr);
+                    if (IsGreaterOrEqual(resultStr, numeratorStr))
+                    {
+                        iterations = LongNumber.StringNumAddition(iterations, i.ToString());
+                        return new LongNumber(iterations, LongNumber._primes);
+                    }
                 }
+                iterations = LongNumber.StringNumAddition(iterations, "10");
             }
-
-            string resultStr = string.Join("", quotient);
-            LongNumber result = new LongNumber(resultStr, LongNumber._primes);
-
-            return result;
         }
 
         public static LongNumber Power(LongNumber number, int exponent)
@@ -259,7 +269,8 @@ namespace LongNumberLib
             LongNumber result = new LongNumber("1", LongNumber._primes);
             if (exponent == 0)
                 return result;
-
+            
+            // Perform exponentiation using multiplication
             for (int i = 0; i < exponent; i++)
                 result *= number;
 
