@@ -174,8 +174,10 @@ namespace LongNumberLib
 
         public static LongNumber operator -(LongNumber num1, LongNumber num2)
         {
+            if (num1.ToBigInteger() < num2.ToBigInteger()) throw new Exception("LongNumber doesn't work with negative numbers");
+            
             LongNumber num3 = new LongNumber("0");
-
+            
             for (int i = 0; i < _primes.Count; i++)
                 num3._vector[i] = LongModulo((num1._vector[i] - num2._vector[i]), _primes[i]);
 
@@ -243,10 +245,14 @@ namespace LongNumberLib
 
         public static LongNumber operator /(LongNumber numerator, LongNumber nominator)
         {
-        // Convert numerator and nominator to strings
+            // Convert numerator and nominator to strings
             string numeratorStr = numerator.ToString();
             string nominatorStr = nominator.ToString();
-
+            
+            // Division by zero error
+            if (nominatorStr == "0") 
+                throw new Exception("Division by zero error");
+            
             string iterations = "0";
             string resultStr = "0";
             while (true)
