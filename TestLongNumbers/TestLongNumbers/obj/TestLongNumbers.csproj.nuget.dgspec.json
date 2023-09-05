@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj": {}
+    "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj": {}
   },
   "projects": {
-    "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj": {
+    "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
+        "projectUniqueName": "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
         "projectName": "TestLongNumbers",
-        "projectPath": "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
+        "projectPath": "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
         "packagesPath": "/home/starvex/.nuget/packages/",
-        "outputPath": "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/obj/",
+        "outputPath": "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/starvex/.nuget/NuGet/NuGet.Config"

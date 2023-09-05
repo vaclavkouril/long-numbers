@@ -17,9 +17,21 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="..\..\..\LongNumberLib\LongNumberLib\LongNumberClass.cs">
-        <Link>LongNumberClass.cs</Link>
-      </Compile>
+      <Compile Remove="LongNumberLib\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="LongNumberLib\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="LongNumberLib\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="LongNumberLib">
+        <HintPath>..\..\LongNumberLib\LongNumberLib\bin\Debug\net6.0\LongNumberLib.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

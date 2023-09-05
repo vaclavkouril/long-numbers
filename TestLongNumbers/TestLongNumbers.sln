@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLongNumbers", "TestLong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongNumberLib", "..\..\LongNumberLib\LongNumberLib\LongNumberLib.csproj", "{589D567C-E1AC-4678-A8F6-639067423E93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongNumberLib", "..\LongNumberLib\LongNumberLib\LongNumberLib.csproj", "{D9DE017F-12D7-43C6-A2A4-1100ED062CCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{589D567C-E1AC-4678-A8F6-639067423E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{589D567C-E1AC-4678-A8F6-639067423E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{589D567C-E1AC-4678-A8F6-639067423E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DE017F-12D7-43C6-A2A4-1100ED062CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DE017F-12D7-43C6-A2A4-1100ED062CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DE017F-12D7-43C6-A2A4-1100ED062CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DE017F-12D7-43C6-A2A4-1100ED062CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

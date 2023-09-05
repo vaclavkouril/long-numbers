@@ -4,78 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9fe127-9002-45d3-82d9-9af3c5ccf539" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../LongNumberLib/LongNumberLib/LongNumberClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../LongNumberLib/LongNumberLib/LongNumberClass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/.idea/.idea.Long_Numbers/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/.idea/.idea.Long_Numbers/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/.idea/.idea.Long_Numbers/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/.idea/.idea.Long_Numbers/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Long_Numbers.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/.idea/.idea.Test1_addition.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/.idea/.idea.Test1_addition.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/.idea/.idea.Test1_addition.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/.idea/.idea.Test1_addition.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/Folder.DotSettings.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/Test1_addition.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/LongNumberLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/LongNumberLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Long_Numbers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Long_Numbers.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Long_Numbers.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Test1_addition" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Test1_addition.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Test1_addition.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Test1_addition.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/bin/Debug/net6.0/Test1_addition.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Long_Numbers.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/Test1_addition.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/apphost" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/ref/Long_Numbers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/ref/Test1_addition.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/refint/Long_Numbers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Debug/net6.0/refint/Test1_addition.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Long_Numbers.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Long_Numbers.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Long_Numbers.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Test1_addition.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Test1_addition.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/Test1_addition.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Long_Numbers/Test1_addition/obj/rider.project.restore.info" beforeDir="false" />
-    </list>
+    <list default="true" id="1e9fe127-9002-45d3-82d9-9af3c5ccf539" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../LongNumberLib/LongNumberLib/LongNumberClass.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2UqfJnE9Zgreg2aDikr8QJRRP6Q" />
@@ -112,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693671971834</updated>
-      <workItem from="1693671973278" duration="7073000" />
+      <workItem from="1693671973278" duration="7079000" />
     </task>
     <servers />
   </component>

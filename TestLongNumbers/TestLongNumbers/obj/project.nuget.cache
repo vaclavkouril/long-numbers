@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S4IC6tvflaMwGIeg+fQOtPW0PEFBu3psAAdBItErhWy55J0Fu2Qk3uaBtLQ2y6NRSF0LMYyyc00Qwmoww0GgSw==",
+  "dgSpecHash": "lC9iF8QDtewRf3P9fCkqrbjSZP7pPLWlOLex5P/EBISiayzyNpLJDIjtPuOxyeYE7sGcmkaHjsAYfvGz7jXFMw==",
   "success": true,
-  "projectFilePath": "/home/starvex/Dokumenty/school/long-numbers/test/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
+  "projectFilePath": "/home/starvex/Dokumenty/school/long-numbers/TestLongNumbers/TestLongNumbers/TestLongNumbers.csproj",
   "expectedPackageFiles": [
     "/home/starvex/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/home/starvex/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",

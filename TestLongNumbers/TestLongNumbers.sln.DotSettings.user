@@ -1,4 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba90739e_002D9888_002D4695_002Db498_002De9272e15f293/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fhome_002Fstarvex_002FDokumenty_002Fschool_002Flong_002Dnumbers_002FLongNumberLib_002FLongNumberLib_002Fbin_002FDebug_002Fnet6_002E0_002FLongNumberLib_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ba90739e_002D9888_002D4695_002Db498_002De9272e15f293/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="1" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=d9de017f_002D12d7_002D43c6_002Da2a4_002D1100ed062ccb_0023LongNumberLib/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
