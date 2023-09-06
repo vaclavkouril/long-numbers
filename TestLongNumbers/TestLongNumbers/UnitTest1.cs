@@ -261,7 +261,7 @@ public class Tests
         //var
         LongNumber a = new LongNumber("53");
         LongNumber b = new LongNumber("0");
-
+        
         //testing
         try
         {
